@@ -8,9 +8,12 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(cookieParser('ntalk'));
-app.use(expressSession({resave: true,
-                saveUninitialized: true,
-                secret: true}));
+app.use(expressSession({
+		secret: 'nTalk',
+		resave: true,
+        saveUninitialized: true,
+        cookie: {secure: false}
+    }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
