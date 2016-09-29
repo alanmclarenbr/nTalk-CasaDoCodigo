@@ -1,7 +1,20 @@
 <% include ../header.ejs %>
+<header>
+	<h2> nTalk - Agenda de Contatos</h2>
 </header>
 <section>
-	<p>Bem-vindo, <%= usuario.nome %></p>
+	<form action="/contato" method="post">
+		<input type="text" name="contato[mome]" placeholder="Nome">
+		<input type="text" name="contato[email]" placeholder="E-mail">
+		<button type="submit">Cadastrar</button>
+	</form>
+	<table>
+		<tr>
+			<th>Nome</th>			
+			<th>E-mail</th>
+			<th>Ação</th>
+		</tr>
+	</table>
 </section>
 <% include ../exit.ejs %>
 <% include ../footer.ejs %>
