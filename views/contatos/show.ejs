@@ -3,8 +3,7 @@
 	<h2>nTalk - Dados do Contato</h2>
 </header>
 <section>
-	<form action="/contato/<%= id %>" method="post">
-		<input type="hidden" name="_method" value="delete">
+	<form action="/contato/<%= id %>?_method=delete" method="post">
 		<p><label>Nome:</label> <%= contato.nome %></p>
 		<p><label>E-mail:</label><%= contato.email %></p>
 		<p>
