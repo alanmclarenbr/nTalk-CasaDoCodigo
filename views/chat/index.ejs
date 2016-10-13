@@ -2,10 +2,10 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
 	var socket = io('http://192.168.0.8:3000');
+	socket.emit('join', '<%= sala %>');
 	socket.on('send-client', function(msg){
 		document.getElementById('chat').innerHTML += msg;
-		console.log('Mensagem Retornada' + msg);
-	});
+    });
 	var enviar = function(){
 		var msg = document.getElementById("msg").value;
 		socket.emit('send-server', msg);
