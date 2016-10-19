@@ -1,15 +1,15 @@
 <% include ../header.ejs %>
-	<header>
+	<header class="row-fluid text-center">
 		<h1>ChatMania</h1>
 		<h4>Bem-vindo!</h4>
 	</header>
-	<section>
+	<section class="row-fluid text-center">
 		<form action="/entrar" method="post">
 			<input type="text" name="usuario[nome]" placeholder="Nome">
 			<br>
 			<input type="text" name="usuario[email]" placeholder="E-mail">
 			<br>
-			<button type="submit">Entrar</button>
+			<button type="submit" class="btn btn-success">Entrar</button>
 		</form>
 	</section>
 <% include ../footer.ejs %>	
