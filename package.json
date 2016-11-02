@@ -3,6 +3,10 @@
   "description": "Node Talk - Agenda de Contatos",
   "version": "0.0.1",
   "private": false,
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha test/**/*.js"
+  },
   "dependencies": {
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
@@ -16,5 +20,10 @@
     "redis": "^2.6.2",
     "serve-favicon": "~2.3.0",
     "socket.io": "^1.4.8"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2",
+    "should": "^11.1.1",
+    "supertest": "^2.0.1"
   }
 }
